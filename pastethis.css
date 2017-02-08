@@ -16,7 +16,7 @@
 }
 
 #TabsToolbar {
-    background: rgba(255, 255, 255, 100) !important;
+    background: #fff !important;
 }
 #main-window:not([privatebrowsingmode="true"])[sizemode="normal"] #TabsToolbar {
     margin-left: 1px !important;
@@ -59,13 +59,13 @@
     -moz-border-left-colors: none !important;
     -moz-border-right-colors: none !important;
     -moz-border-bottom-colors: none !important;
-    background: rgba(255, 255, 255, .05) !important;
+    background: rgba(255, 255, 255, .5) !important;
 }
 
 .scrollbutton-up[disabled="true"] {
     border-style: solid !important;
     border-right-width: 1px !important;
-    border-right-color: rgba(218, 218, 218, 100) !important;
+    border-right-color: #dadada !important;
     margin-left: -1px !important;
     margin-right: -1px !important;
 }
@@ -122,10 +122,10 @@
 }
 
 #navigator-toolbox::after {
-    background: rgba(255, 255, 255, 100) !important;
+    background: #fff !important;
 }
 #nav-bar {
-    background: rgba(255, 255, 255, 100) !important;
+    background: #fff !important;
     box-shadow: none !important;
     background-clip: padding-box !important;
     border-color: transparent !important;
@@ -234,14 +234,14 @@
 }
 #urlbar #plugins-notification-icon,
 #urlbar #notification-popup-box {
-    display: none!important;
+    display: none !important;
 }
+
 
 /*===============================================
   Thanks Gammagate.de for this!
   https://userstyles.org/styles/136710/firefox-new-bookmark-and-folder-icons
 ===============================================*/
-
 .bookmark-item[container]:not([query="true"]) {
 list-style-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAb0lEQVQ4T2NkoBAw+vj4XGBgYNBHMufDv3//HLdt2wYSJwhABvzHouoDAwMDQQP+//9/AZcBBG2GKWD09vYuYGRk5CdaB6pCRpABHygw4APlXsARiET7aNQFDAyDIwzQMxPRUcjAwHCRkRTV2NQCAAI/KGdF3XcGAAAAAElFTkSuQmCC') !important;
 -moz-image-region: rect(0px, 16px, 16px, 0px) !important;
