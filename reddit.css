@@ -1,0 +1,73 @@
+@namespace url(http://www.w3.org/1999/xhtml);
+
+@-moz-document domain("reddit.com") {
+
+  #header {
+    background-color: #fff;
+    border-bottom: 1px solid #ff981f;
+  }
+  
+  #sr-header-area {
+    background-color: #fff;
+  }
+  
+  .srdrop .choice {
+    background: #fff;
+  }
+  
+  a {
+    color: #ff981f;
+  }
+  
+  #header-bottom-right {
+    background-color: transparent;
+  }
+  
+  .tabmenu li a {
+    background-color: #fff;
+    border: 1px solid #cecece;
+    border-bottom: 1px solid white;
+  }
+
+  .tabmenu li.selected a {
+    color: #ff981f;
+    background-color: white;
+    border: 1px solid #ff981f;
+    border-bottom: 1px solid white;
+    z-index: 100;
+  }
+
+  .thing .title {
+    color: #2b2b2b;
+  }
+  
+  .tagline a, .search-result-meta a {
+    color: #ff981f;
+    text-decoration: none;
+  }
+  
+  .entry .buttons li a {
+    color: #ff981f;
+    font-weight: bold;
+    padding: 0 1px;
+  }
+  
+  .morelink,
+  .sidebox .spacer {
+    display: none !important;
+  }
+  
+  .linkinfo {
+    border: 1px solid #ff981f;
+    background-color: #fff;
+  }
+  
+  #search input[type="text"] {
+    border: 1px solid #ff981f;
+  }
+  
+  .md a {
+    color: #ff981f;
+  }
+ 
+}
