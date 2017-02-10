@@ -1,3 +1,8 @@
+/*===============================================
+  Mindi - Mindinet.org
+  Note: Best result from display options disable 'allow subreddits to show me custom themes'
+===============================================*/
+
 @namespace url(http://www.w3.org/1999/xhtml);
 
 @-moz-document domain("reddit.com") {
