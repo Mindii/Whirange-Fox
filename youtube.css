@@ -1,0 +1,64 @@
+/*===============================================
+  Mindi - Mindinet.org
+  Note: -
+===============================================*/
+
+@-moz-document domain("youtube.com") {
+  
+  /* Menus */
+  .guide-pinned .show-guide .content-snap-width-1 {
+    background: #ff981f !important;
+    color: #ff981f !important; }
+  
+  .guide-item-selected {
+    background: #ff981f !important; }
+  
+  .guide-toplevel .g-hovercard.yt-uix-sessionlink.spf-link {
+    color: #ff981f !important; }
+  
+  #trending-guide-item {
+    display: none; }
+  
+  #guide-subscriptions-section .yt-uix-sessionlink {
+    color: #ff981f !important; }
+  #guide-subs-footer-container .yt-uix-sessionlink {
+    color: #2b2b2b !important; }
+  #guide-subs-footer-container .yt-uix-sessionlink:hover {
+    color: #fff !important; }
+  
+  /* Subscriptions: Video info  */
+  .yt-uix-tile-link.yt-ui-ellipsis.yt-ui-ellipsis-2.yt-uix-sessionlink.spf-link {
+    color: #ff981f !important; }
+  
+  .yt-uix-tile-link.yt-ui-ellipsis.yt-ui-ellipsis-2.yt-uix-sessionlink.spf-link:hover {
+    color: #2b2b2b !important; }
+  
+  .yt-lockup-byline .g-hovercard.yt-uix-sessionlink.spf-link {
+    color: #ff981f !important; }
+  
+  .yt-lockup-byline .g-hovercard.yt-uix-sessionlink.spf-link:hover {
+    color: #2b2b2b !important; }
+  
+  .watched-badge {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    line-height: 100px;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    font-weight: 500;
+    background-color: #000;
+    opacity: .7;
+    text-align: center;
+    font-size: 200%; }
+  
+  /* Player */
+  .html5-play-progress, .ytp-play-progress {
+    background: #FF981F !important; 
+  }
+  
+
+  /* Logo */
+  #yt-masthead #logo-container .logo {
+    background:   url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAAeAgMAAAADX+uzAAAACVBMVEUAAACCgoL/mB/WZfhbAAAAAXRSTlMAQObYZgAAAGlJREFUKM9jIA2IhkJBAFwoFAZCaC3ExbBAq2EBF0PYqlmhy1ZNXbUKJLRo1Qq40EqoUIMGUCg0Myp02dTMpSCzVsGFwBqXYhdC14hViGsVg1YDkAjNDF0FdQSmEP0DB18MscKEHBioCACFOXFnVp/XgQAAAABJRU5ErkJggg==') }
