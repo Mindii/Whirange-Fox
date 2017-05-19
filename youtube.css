@@ -16,7 +16,7 @@
   .guide-toplevel .g-hovercard.yt-uix-sessionlink.spf-link {
     color: #ff981f !important; }
   
-  #trending-guide-item {
+  #trending-guide-item, #unlimited-guide-item, #-guide-item {
     display: none; }
   
   #guide-subscriptions-section .yt-uix-sessionlink {
@@ -62,3 +62,5 @@
   /* Logo */
   #yt-masthead #logo-container .logo {
     background:   url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEcAAAAeAgMAAAADX+uzAAAACVBMVEUAAACCgoL/mB/WZfhbAAAAAXRSTlMAQObYZgAAAGlJREFUKM9jIA2IhkJBAFwoFAZCaC3ExbBAq2EBF0PYqlmhy1ZNXbUKJLRo1Qq40EqoUIMGUCg0Myp02dTMpSCzVsGFwBqXYhdC14hViGsVg1YDkAjNDF0FdQSmEP0DB18MscKEHBioCACFOXFnVp/XgQAAAABJRU5ErkJggg==') }
+
+}
