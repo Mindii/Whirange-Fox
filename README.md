@@ -1,9 +1,21 @@
-# Stylish 3.0.1 Broke this, I would like to fix it just need to figure out new changes
+# What's new
+Firefox 57+ (WebExtensions) can't edit browser appearance and only way is to edit files yourself,
+so in this new way you don't need stylish just theme file more about it in Usage part.
 
 # Whirange-Fox
-Very basic, clean, white skin with orange accent color this time for firefox using stylish.
+Very basic, clean, white skin with orange accent color for Firefox/Waterfox.
 
-#Usage & How to get look at screenshots
+#Usage
+
+    1. get userChrome.css: https://edit_this_soon
+    
+    2. Insert file to profile directory:
+    	Linux: ~/.waterfox/ PROFILID /chrome/
+    	Windows: C:\Users\ USERNAME \AppData\Roaming\Mozilla\Waterfox\Profiles\ PROFILEID \chrome\
+	
+    Note: Userid is random there usually is only one, also chrome folder dosent exist yet most likely so create it.
+
+#Usage (Pre Firefox 57)
 
     1. Download stylish from here: https://addons.mozilla.org/en-US/firefox/addon/stylish/
 
