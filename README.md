@@ -11,7 +11,7 @@ Very basic, clean, white skin with orange accent color for Firefox/Waterfox.
     
     2. Insert file to profile directory:
     Linux: ~/.waterfox/ PROFILID /chrome/userChrome.css
-    Windows: C:\Users\ USERNAME \AppData\Roaming\Mozilla\Waterfox\Profiles\ PROFILEID \chrome\userChrome.css
+    Windows: C:\Users\ USERNAME \AppData\Roaming\Waterfox\Profiles\ PROFILEID \chrome\userChrome.css
 	
     Note: Userid is random id and there is usually only one, also chrome folder dosen't exist yet so create it.
 
