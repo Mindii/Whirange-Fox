@@ -1,4 +1,4 @@
-# Stylish 3.0.1 Broke this, I would like to fix it just need to figure out new changes on them.
+# Stylish 3.0.1 Broke this, I would like to fix it just need to figure out new changes
 
 # Whirange-Fox
 Very basic, clean, white skin with orange accent color this time for firefox using stylish.
