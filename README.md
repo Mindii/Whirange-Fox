@@ -5,7 +5,7 @@ so in this new way you don't need stylish just theme file more about it in Usage
 # Whirange-Fox
 Very basic, clean, white skin with orange accent color for Firefox/Waterfox.
 
-#Usage
+# Usage
 
     1. get userChrome.css: https://raw.githubusercontent.com/Mindii/Whirange-Fox/master/userChrome.css
     
@@ -15,7 +15,7 @@ Very basic, clean, white skin with orange accent color for Firefox/Waterfox.
 	
     Note: Userid is random id and there is usually only one, also chrome folder dosen't exist yet so create it.
 
-#Usage (Pre Firefox 57)
+# Usage (Pre Firefox 57)
 
     1. Download stylish from here: https://addons.mozilla.org/en-US/firefox/addon/stylish/
 
