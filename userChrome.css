@@ -1,14 +1,44 @@
 
 /*===============================================
   Mindi - Mindinet.org
-  Note: very basic, clean, white skin with orange accent color this time for Stylish / Firefox.
+  Note: very basic, clean, white skin with orange accent color for Firefox.
 ===============================================*/
 
+/* MAIN BROWSER */
 @namespace url(http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul);
 
 #TabsToolbar {
     background: #fff !important;
 }
+
+/*=====Popup Menus====*/
+menupopup, popup,
+popup > menu > menupopup,
+menupopup > menu > menupopup {
+-moz-appearance: none !important;
+background: #fff !important;
+border: 1px solid #525A6D !important;
+margin: 2px 2px 2px  !important;
+padding: 4px 2px 4px 2px  !important;}
+
+menupopup menuseparator {
+-moz-appearance: none !important;
+background: #E2E2E2 !important;
+margin: 8px 0px 8px 0px !important;
+padding: 0px !important;
+border-top: none !important;
+border-color: transparent !important;}
+
+menupopup menu, menuitem{
+-moz-appearance: none !important;
+color: #000!important;}
+
+menupopup menu:hover, menuitem:hover {
+-moz-appearance: none !important;
+color:#fff !important;
+background-color:#000 !important;} 
+
+
 
 #main-window:not([privatebrowsingmode="true"])[sizemode="normal"] #TabsToolbar {
     margin-left: 1px !important;
@@ -29,11 +59,14 @@
 }
 
 #TabsToolbar .arrowscrollbox-scrollbox {
-    padding: 0px !important;
+    padding: 0px !important;	
+}
+
+#titlebar, #tabbrowser-tabs {
+    --tab-min-height: 23px !important;
 }
 
 #TabsToolbar .tabbrowser-tabs {
-    min-height: 32px !important;
     margin-bottom: 0px !important;
 }
 
@@ -49,6 +82,7 @@
     background-clip: padding-box !important;
     transition: all .4s !important;
     margin-left: -1px !important;
+    max-height: 25px !important;
 }
 
 #TabsToolbar .tabs-newtab-button {
@@ -91,19 +125,9 @@
     background: transparent !important;
 }
 
-#TabsToolbar .tab-background-start,
-#TabsToolbar .tab-background-end {
-    display: none !important;
-}
-
 #TabsToolbar .tab-background-middle {
     margin: -4px -2px !important;
     background: transparent !important;
-}
-
-#TabsToolbar .tabbrowser-tab:after,
-#TabsToolbar .tabbrowser-tab:before {
-    display: none !important;
 }
 
 #TabsToolbar .tabs-newtab-button {
@@ -112,6 +136,32 @@
     width: auto !important;
     padding: 0px 6px !important;
 }
+
+
+/* HIDE TAB BAR WHEN ONLY ONE TAB */
+:root[sizemode="normal"] #nav-bar{ --uc-window-drag-space-width: 20px }
+
+/* #tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox{ min-height: 0 !important; } */
+#tabbrowser-tabs, #tabbrowser-tabs > .tabbrowser-arrowscrollbox, #tabbrowser-arrowscrollbox{ min-height: 0 !important; }
+
+:root:not([customizing]) #tabbrowser-tabs .tabs-newtab-button,
+:root:not([customizing]) #tabs-newtab-button,
+:root:not([customizing]) #TabsToolbar-customization-target > .toolbarbutton-1,
+:root:not([customizing]) #TabsToolbar .titlebar-button{
+  -moz-appearance: none !important;
+  height: 0px;
+  padding-top: 0px !important;
+  padding-bottom: 0px !important;
+  -moz-box-align: stretch;
+  margin: 0 !important;
+}
+#tabbrowser-tabs .tabbrowser-tab{ height: var(--tab-min-height) }
+
+#tabbrowser-tabs .tabbrowser-tab[first-visible-tab="true"][last-visible-tab="true"]{
+  visibility: collapse !important;
+}
+/* HIDE TAB BAR WHEN ONLY ONE TAB */
+
 
 #addon-bar,#PersonalToolbar,
 #main-window:not([privatebrowsingmode])[sizemode="maximized"] #nav-bar {
@@ -123,6 +173,10 @@
     background: #fff !important;
 }
 
+#navigator-toolbox {
+    --tabs-border-color: rgba(0,0,0,0) !important;
+}
+
 #nav-bar {
     background: #fff !important;
     box-shadow: none !important;
@@ -130,10 +184,8 @@
     border-color: transparent !important;
     border-bottom-right-radius: 10px !important;
     border-bottom: 1px solid #ff981f !important;
-}
-
-#PanelUI-button {
-    background-image: none !important;
+    --toolbarbutton-outer-padding: 2px;
+    --toolbarbutton-inner-padding: 2px;
 }
 
 #nav-bar-customization-target {
@@ -172,14 +224,14 @@
 }
 
 #urlbar {
-    background: transparent !important;
+    background: #fff !important;
     padding: 0px !important;
     text-align: left!important;
-    padding-left: 8px !important;
+    padding-left: 0px !important;
     margin-top: 0px !important;
     margin-bottom: 0px !important;
-    margin-left: 20px !important;
-    margin-right: 4px !important;
+    margin-left: 1px !important;
+    margin-right: 1px !important;
     border: 1px solid transparent !important;
     color: #ff8a00 !important;
     font-family: "Segoe UI Semibold", Helvetica, Arial, sans-serif;
@@ -187,16 +239,52 @@
     box-shadow: none !important;
 }
 
+#identity-box {
+    padding-inline-start: 2px !important;
+    padding-inline-end: 2px !important;
+    margin-inline-end: 2px !important;
+}
+
 .urlbar-input {
     padding-left: 10px !important;
+}
+
+.urlbar-input-box, 
+.urlbar-history-dropmarker .urlbar-icon .chromeclass-toolbar-additional {
+    /* background: rgb(244, 244, 244) !important; */
+    padding: 3px 5px 0 5px !important;
+}
+
+.urlbar-input-box, 
+.urlbar-history-dropmarker,
+#identity-box,
+#PlacesToolbarItems {
+    margin: 3px 0 3px 0 !important;
 }
 
 .ac-type-icon,.search-go-button,.search-go-button-stack,.search-go-button,
 #feed-button,#go-button,#urlbar-reload-button,
 image.urlbar-icon#reader-mode-button,
-#back-button > .toolbarbutton-icon,
-#forward-button > .toolbarbutton-icon,
-#PanelUI-button {
+#back-button,
+#forward-button,
+#PanelUI-button, #pageActionButton,
+#TabsToolbar .tabbrowser-tab:after,
+#TabsToolbar .tabbrowser-tab:before,
+#TabsToolbar .tab-background-start,
+#TabsToolbar .tab-background-end,
+#TabsToolbar #new-tab-button,
+#context-sendpagetodevice, 
+#context-sep-sendpagetodevice,
+#context-sendlinktodevice, 
+#context-sep-sendlinktodevice,
+#context_sendTabToDevice, 
+#context_sendTabToDevice_separator,
+#context-pocket,
+#context-savelinktopocket,
+#context-savelink,
+#context-bookmarklink,
+#screenshots_mozilla_org-menuitem-_create-screenshot,
+.tab-line {
     display: none !important;
 }
 
@@ -212,10 +300,15 @@ list-style-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBA
 
 /* File */
 .bookmark-item {
-list-style-image:  url(' data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEUAAADsjirmiy31kybzkifxkSjVgzTFezn/mB/0kib3lCT5lSPbhjLOfzedaEFKSkr/mB//snu0VkxjAAAAEHRSTlMApJj49vXSafnn4fWDcT8wkyW6WgAAAEJJREFUGNNjYGBghAIGGBCAAjZ0AS42NAFBiAhCgJNTgBsiAAccrGgCAswEBVgwBSg3gxW7w/jZ2dl5eZhAgI+BAQDkBwm5PPDSvwAAAABJRU5ErkJggg==') !important;
+list-style-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEUAAADsjirmiy31kybzkifxkSjVgzTFezn/mB/0kib3lCT5lSPbhjLOfzedaEFKSkr/mB//snu0VkxjAAAAEHRSTlMApJj49vXSafnn4fWDcT8wkyW6WgAAAEJJREFUGNNjYGBghAIGGBCAAjZ0AS42NAFBiAhCgJNTgBsiAAccrGgCAswEBVgwBSg3gxW7w/jZ2dl5eZhAgI+BAQDkBwm5PPDSvwAAAABJRU5ErkJggg==') !important;
+}
+
+/* Cookie Autodelete */
+#cookieautodelete_kennydo_com-browser-action {
+list-style-image:  url('data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAwICAgJCAwJCQwRCwoLERUPDAwPFRgTExUTExgRDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/2wBDAQ0LCw0ODRAODhAUDg4OFBQODg4OFBEMDAwMDBERDAwMDAwMEQwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAz/wAARCAASABIDASIAAhEBAxEB/8QAFwABAQEBAAAAAAAAAAAAAAAAAAUGBP/EAC8QAAECAgQMBwAAAAAAAAAAAAEAAgQRAwUSIQYTFjEyMzRBQlJTgyJDRFFyhJL/xAAXAQEBAQEAAAAAAAAAAAAAAAAFBgID/8QAKBEAAQMABgsAAAAAAAAAAAAAAgABAwQRFDFTggUhIjI0NXKRotHS/9oADAMBAAIRAxEAPwDTVtWsTFxDmUT7MM0kBg4gLrV3MmD9aw0DT07IgkMpZSeJmyWzuc1vNaXJGwVLCR1Ix5Mhc1u4ifheFwNohadipkvMhK++fCpZqRMFJeUnrlF7ibZ17wKgeGIoGjFqoya9r+pbjKCqOvunouzflFByajfbyMZu1nQ+SJW1aQwB7F9I+z0PFLx9KxhDs41Pc0+0o+DW2+nz8en9dEXKbmI5VuLgnzLXoiJlGL//2Q==') !important;
 }
 
 /* ublock */
 #ublock0_raymondhill_net-browser-action {
-list-style-image:  url(' data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAKlBMVEUAAAD/mB//mB//mB//mB//mB//mB//mB//mB//mB//mB//mB//mB//mB8tYPyFAAAADXRSTlMAP1mrIVdthb+ekCS1zzMQzAAAAG5JREFUCNdjAAKxRAYQYBG9ezfQgYGB9y4YXGDggDAaGDghjAkMXHd5Lygo313AwA5kKCvdTWBgAzLOGtwNYGC9K16grARkMN613gxUI8DAAtEFNFEWRF8EWsEIpIEyDGChixBbdS85ACmQJEgCAJldNkGdJOYCAAAAAElFTkSuQmCC') !important;
-} 
+list-style-image:  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAKlBMVEUAAAD/mB//mB//mB//mB//mB//mB//mB//mB//mB//mB//mB//mB//mB8tYPyFAAAADXRSTlMAP1mrIVdthb+ekCS1zzMQzAAAAG5JREFUCNdjAAKxRAYQYBG9ezfQgYGB9y4YXGDggDAaGDghjAkMXHd5Lygo313AwA5kKCvdTWBgAzLOGtwNYGC9K16grARkMN613gxUI8DAAtEFNFEWRF8EWsEIpIEyDGChixBbdS85ACmQJEgCAJldNkGdJOYCAAAAAElFTkSuQmCC') !important;
+}
